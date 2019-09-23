@@ -1,4 +1,4 @@
-# Bienvenido a RansoProyect!
+# Bienvenido a RansoProject!
 
 Para poder contribuir tenga en cuenta la siguente:
 
@@ -33,7 +33,7 @@ Para poder contribuir tenga en cuenta la siguente:
 - Decoración (background-image, color, etc)
 - Variables
 - Mixins
-
+Ejemplo:
 ```
 .button {
   display: block;
