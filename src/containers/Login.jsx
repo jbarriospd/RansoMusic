@@ -1,5 +1,5 @@
 import React from 'react'
-import '../assets/styles/components/Login.scss'
+import '../assets/styles/containers/Login.scss'
 
 const Login = () => (
     <section className="Login">

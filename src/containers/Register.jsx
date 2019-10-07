@@ -1,5 +1,5 @@
 import React from 'react'
-import '../assets/styles/components/Register.scss'
+import '../assets/styles/containers/Register.scss'
 
 const Register = () => (
     <section className="Register">
