@@ -4,7 +4,7 @@ import '../assets/styles/components/Register.scss'
 const Register = () => (
     <section className="Register">
       <section className="Register__container">
-        <h2>Regístrate</h2>
+        <h2>Regístrame</h2>
         <form className="Register__container--form" action="">
           <input className="input" type="text" name="" id="" placeholder="Nombre" />
           <input className="input" type="text" name="" id="" placeholder="Correo" />
