@@ -40,6 +40,14 @@ module.exports = {
           'sass-loader',
         ],
       },
+      {
+        test: /\.(png|jp(e*)g|gif|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ],
   },
   plugins: [

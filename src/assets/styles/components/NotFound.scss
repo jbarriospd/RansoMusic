@@ -45,7 +45,7 @@
     }
   }
   .return {
-    @include center-things;
+    @include center-items;
     a {
       color: $white-white;
       font-weight: bold;
@@ -72,5 +72,5 @@
       }
     }
   }
-  @include center-things;
+  @include center-items;
 }

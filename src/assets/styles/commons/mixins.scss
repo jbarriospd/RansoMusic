@@ -1,5 +1,22 @@
-@mixin center-things {
+@mixin center-items {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin align-items {
+  display: flex;
+  align-items: center;
+}
+
+@mixin align-end-items {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@mixin align-start-items {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
