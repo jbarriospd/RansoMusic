@@ -3,7 +3,8 @@ import React from 'react'
 // import Footer from '../components/Footer'
 // import Login from '../components/Login'
 // import Register from '../components/Login'
-import Home from '../containers/Home'
+// import Home from '../containers/Home'
+import Uploader from '../containers/Uploader'
 // import OnBoarding from '../components/Login'
 // import Podcast from '../components/Login'
 import '../assets/styles/App.scss'
@@ -11,7 +12,7 @@ import '../assets/styles/App.scss'
 const App = () => (
     <>
         {/* <Header /> */}
-        <Home />
+        <Uploader />
         {/* <Register /> */}
         {/* <OnBoarding /> */}
         {/* <Podcast /> */}

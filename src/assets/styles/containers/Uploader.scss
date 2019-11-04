@@ -1,0 +1,208 @@
+@import '../commons/colors.scss';
+@import '../commons/mixins.scss';
+
+.Uploader {
+    height: 100vh;
+    display: grid;
+    box-sizing: border-box;
+    grid-template: 65px 1fr 80px / min-content 1fr;
+    min-height: 100%;
+    grid-template-areas: "header header"
+                         "aside main"
+                         "aside player";
+    &--item {
+      background-color: $white1;
+      box-shadow: 0 4px 20px -2px rgba(0,0,0,.1);
+    }
+  
+    &__header {
+      grid-area: header;
+      padding: 5px;
+      position: relative;
+      box-sizing: border-box;
+      box-shadow: 0 4px 20px -2px rgba(0,0,0,.1);
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      &--logo {
+        width: 70%;
+        
+        @include align-items;
+        img {
+          width: 51.2px;
+          padding-right: 5px;
+        }
+        img,
+        span {
+          cursor: pointer;
+        }
+      }
+  
+      &--plug {
+        width: 15%;
+        @include align-items;
+  
+      }
+  
+      &--login {
+        width: 15%;
+        position: relative;
+        transition: display 200ms;
+  
+        @include flex-end-items;
+        img {
+          width: 51.2px;
+          margin-right: 5px;
+          cursor: pointer;
+        }
+        ul {
+          margin: 0;
+          padding: 11px 15px 0 0;
+          list-style-type: none;
+          position: absolute;
+          top: 45px;
+          text-align: right;
+          display: none;
+  
+          li {
+            padding: 6px 2px;
+            a {
+              color: #080808;
+            }
+            &:hover {
+              font-weight: bold;
+              cursor: pointer;
+            }
+          }
+        }
+        
+        &:hover > ul {
+          display: block;
+        }
+        
+      }
+    }
+  
+    &__aside {
+      grid-area: aside;
+      box-shadow: 10px 0 40px -4px rgba(0,0,0,.3);
+      @include align-items;
+      justify-content: space-between;
+      flex-flow: column nowrap;
+      
+      ul {
+        width: 165px;
+        height: 80%;
+        list-style-type: none;
+        margin: 50% auto 0;
+        padding: 0;
+        cursor: pointer;
+        
+        li {
+          margin: auto;
+          padding: 20px;
+          &:hover {
+            border-right: 2px solid gray;
+            font-weight: bold;
+            cursor: pointer;
+          }
+        }
+      }
+      footer {
+        color: gray;
+        span {
+          font-size: 8px;
+        }
+      }
+    }
+  
+    &__main {
+      grid-area: main;
+      padding: 2rem 2rem 100px;
+      overflow-y: scroll;
+      
+      &--wrapper {
+        @include center-items;
+        flex-flow: column nowrap;
+
+        &--file-upload{
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          position: relative;
+          @include center-items;
+          border: none;
+          overflow: hidden;
+          background-image: linear-gradient(to bottom, rgb(10, 11, 12) 50%, #FFFFFF 50%);
+          background-size: 100% 200%;
+          transition: all 1s;
+          color: #FFFFFF;
+          font-size:50px;
+          input[type='file']{
+              height:200px;
+              width:200px;
+              position:absolute;
+              top:0;
+              left:0;
+              opacity:0;
+              cursor:pointer;
+          }
+          &:hover{
+              background-position: 0 -100%;
+              border: 1px solid lightgray;
+              color: $gray;
+          }
+        }
+      }
+    }
+    
+    &__player {
+      grid-area: player;
+      box-sizing: border-box;
+      @include align-items;
+      justify-content: space-between;
+  
+      &--author {
+        @include align-items;
+        flex-flow: row nowrap;
+  
+        div:nth-of-type(1) {
+          width: 50px;
+          @include center-items;
+          img {
+            text-align: center;
+            width: 100%;
+          }
+        }
+        div:nth-of-type(2) {
+          display: flex;
+          flex-flow: column nowrap;
+          p {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+          }
+        }
+      }
+  
+      &--play {
+        @include align-items;
+  
+        &--back {
+          
+        }
+        &--play {
+          
+        }
+        &--forth {
+          
+        }
+      }
+  
+      &--controls {
+        @include align-items;
+        
+      }
+    }
+  }
