@@ -9,13 +9,13 @@
   align-items: center;
 }
 
-@mixin align-end-items {
+@mixin flex-end-items {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 
-@mixin align-start-items {
+@mixin flex-start-items {
   display: flex;
   align-items: center;
   justify-content: flex-start;
